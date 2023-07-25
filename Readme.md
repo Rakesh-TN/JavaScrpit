@@ -1,0 +1,1 @@
+# This folder was a out of my javascript learning

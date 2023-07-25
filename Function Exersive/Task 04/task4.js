@@ -1,7 +1,24 @@
-let a = prompt("Enter the value A")
-if (a%4==0){
-    console.log(a,"is Leap Year")
+let a = parseInt(prompt("Enter the value A "))
+let b = parseInt(prompt("Enter the value B "))
+let num = prompt("Operation ")
+function calculator(){
+    if (num=="+"){
+        console.log(a+b)
+    }
+    else if(num=="-"){
+        console.log(a-b)
+    }
+    else if(num=="*"){
+        console.log(a*b)
+    }
+    else if(num=="/"){
+        console.log(a/b)
+    }
+    else if(num=="%"){
+        console.log(a%b)
+    }
+    else{
+        console.log("Invaild Information")
+    }
 }
-else{
-    console.log(a,"is not a leap year")
-}
+calculator()
