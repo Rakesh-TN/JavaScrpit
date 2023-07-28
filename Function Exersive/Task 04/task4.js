@@ -1,5 +1,5 @@
-let a = parseInt(prompt("Enter the value A "))
-let b = parseInt(prompt("Enter the value B "))
+let a = prompt("Enter the value A ")
+let b = prompt("Enter the value B ")
 let num = prompt("Operation ")
 function calculator(){
     if (num=="+"){
