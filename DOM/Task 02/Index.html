@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 02</title>
+    </head>
+    <body>
+        <script>
+        let divEl = document.createElement("div")
+        divEl.style.maxWidth="25%"
+        divEl.style.marginLeft="auto"
+        divEl.style.marginRight="auto"
+        document.body.appendChild(divEl)
+        let headEl = document.createElement("h1")
+        headEl.textContent="Add to Cart"
+        headEl.style.textAlign="center"
+        divEl.appendChild(headEl)
+        let inputEl = document.createElement("input")
+        inputEl.setAttribute("id","inSide")
+        inputEl.style.width="200px"
+        divEl.appendChild(inputEl)
+        let buttonEl = document.createElement("button")
+        buttonEl.textContent="Add to Card"
+        buttonEl.style.marginLeft="20px"
+        buttonEl.style.backgroundColor="Black"
+        buttonEl.style.color="white"
+        buttonEl.setAttribute("onclick","changeEvent()")
+        divEl.appendChild(buttonEl)
+        let breakEl = document.createElement("br")
+        let break1El = document.createElement("br")
+        divEl.appendChild(breakEl)
+        divEl.appendChild(break1El)
+        let underEl = document.createElement("br")
+        divEl.appendChild(underEl)
+        let unlistEl = document.createElement("ul")
+        divEl.appendChild(unlistEl)
+        
+        function changeEvent() { 
+            let inputEl= document.querySelector('#inSide')
+            let ab = inputEl.value
+            let unlist1El = document.createElement("li")
+            unlist1El.style.listStyleType = "none"
+            divEl.appendChild(unlist1El)
+            
+            for(i=0; i<ab.length; i++){
+                unlist1El.textContent=ab
+                unlistEl.value=""
+            }
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+</head>
+<body>
+    <script>
+        let divEl = document.createElement("div")
+        divEl.style.maxWidth="18%"
+        divEl.style.marginLeft="auto"
+        divEl.style.marginRight="auto"
+        let headEl = document.createElement("h1")
+        headEl.textContent="Login Page"
+        headEl.style.textAlign="center"
+        divEl.appendChild(headEl)
+        let inputEl = document.createElement("input")
+        divEl.appendChild(inputEl)
+        let buttonEl = document.createElement("button")
+        buttonEl.textContent="Login"
+        buttonEl.style.marginLeft="10px"
+        buttonEl.style.backgroundColor="blue"
+        buttonEl.style.borderColor="blue"
+        buttonEl.style.color="white"
+        divEl.appendChild(buttonEl)
+        document.body.appendChild(divEl)
+    </script>
+</body>
+</html>
