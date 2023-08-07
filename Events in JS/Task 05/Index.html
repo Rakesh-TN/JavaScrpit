@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 05</title>
+</head>
+<body>
+    <script>
+        
+        let paraEl = document.createElement("p")
+        document.body.appendChild(paraEl)
+        paraEl.textContent="Enter the User Name : "
+        let inputEl = document.createElement("input")
+        inputEl.setAttribute("id","userName")
+        paraEl.appendChild(inputEl)
+        let para1El = document.createElement("p")
+        document.body.appendChild(para1El)
+        para1El.textContent="Enter the Password : "
+        let input1El = document.createElement("input")
+        input1El.setAttribute("type","password")
+        input1El.setAttribute("id","passKey")
+        para1El.appendChild(input1El)
+        let buttonEl = document.createElement("button")
+        buttonEl.textContent="Login"
+        buttonEl.setAttribute("onclick","changeEvent()")
+        document.body.appendChild(buttonEl)
+
+        function changeEvent(){
+            let inputEl = document.querySelector("#userName")
+            let input1El = document.querySelector("#passKey")
+
+            let a = inputEl.value
+            let b = input1El.value
+
+            if (a==""|| b==""){
+                alert("Any one box is not filled")
+            }
+            else{
+                alert("Login Successfully")
+            }
+        }
+    </script>
+</body>
+</html>

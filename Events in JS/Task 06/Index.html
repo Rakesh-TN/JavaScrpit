@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 06</title>
+</head>
+<body>
+    <div>
+        <label for="text"> Enter the A Value : </label>
+        <input type="number" id="valueofA"><br><br>
+        <label for="text"> Enter the B Value : </label>
+        <input type="number" id="valueofB"><br><br>
+        <button type="submit" onclick="finEvents()">Vaildate</button>
+        <br><br><br>
+        <p id="Addition">Add</p>
+        <p id="Subtraction">Sub</p>
+        <p id="Multiple">Mult</p>
+        <p id="Division">Div</p>
+        <p id="Modulus">Mod</p>
+    
+    </div>
+    <script>
+        function finEvents(){
+            let input1=parseFloat(document.querySelector("#valueofA").value); 
+            let input2=parseFloat(document.querySelector("#valueofB").value);
+            let add=document.querySelector("#Addition") 
+            add.innerHTML=(input1+input2)
+            let sub=document.querySelector("#Subtraction") 
+            sub.innerHTML=(input1-input2)
+            let multi=document.querySelector("#Multiple")
+            multi.innerHTML=(input1*input2)
+            let divis=document.querySelector("#Division")
+            divis.innerHTML=(input1/input2)
+            let modul=document.querySelector("#Modulus") 
+            modul.innerHTML=(input1%input2)
+        }
+    </script>
+</body>
+</html>

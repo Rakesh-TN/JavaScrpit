@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 04</title>
+</head>
+<body>
+    <script>
+        let divEl = document.createElement("div")
+        document.body.appendChild(divEl)
+        let paraEl = document.createElement("p")
+        paraEl.textContent="Value A : "
+        divEl.appendChild(paraEl)
+        let inputEl = document.createElement("input")
+        inputEl.setAttribute("id","valueA")
+        paraEl.appendChild(inputEl)
+        let para1El = document.createElement("p")
+        para1El.textContent="Value B : "
+        divEl.appendChild(para1El)
+        let input1El = document.createElement("input")
+        input1El.setAttribute("id","valueB")
+        para1El.appendChild(input1El)
+        let buttonEl = document.createElement("button")
+        buttonEl.textContent="Validate"
+        buttonEl.setAttribute("onclick","checkEvent()")
+        divEl.appendChild(buttonEl)
+
+        function checkEvent(){
+            let inputEl = document.querySelector("#valueA")
+            let input1El = document.querySelector("#valueB")
+
+            let valueA = inputEl.value
+            let valueB = input1El.value
+
+            if (valueA==valueB){
+                alert("Equal Value")
+            }
+            else if (valueA>valueB){
+                alert("A is Greater than B")
+            }
+            else if (valueA<valueB){
+                alert("A is Less than B")
+            }
+            else{
+                alert("invaild information ")
+            }
+        }
+    </script>
+</body>
+</html>

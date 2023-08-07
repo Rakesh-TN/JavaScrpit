@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 07</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <label for="text">Enter the Your Number : </label> <input type="number" id="phoneNumber"><br><br><br> 
+            <button type="submit" value="submit" id="submitOutput" onclick="numberList()">Submit</button>
+            <br>
+            <br>
+            <select name="number" id="numberList">
+            </select>
+        </div>    
+    </div>
+    <script>
+        let inputEl = document.querySelector('#phoneNumber')
+        let optionEl = document.querySelector('#numberList')
+
+        function numberList(){
+            let ab = inputEl.value
+            let optionEl2 = document.createElement("option")
+            optionEl.appendChild(optionEl2)
+            
+            
+            for (let i = 0; i < ab.length; i++) {
+                optionEl2.textContent=ab   
+                inputEl.value=""   
+            }
+        }
+    </script>
+</body>
+</html>

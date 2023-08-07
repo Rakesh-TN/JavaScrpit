@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 08</title>
+</head>
+<body>
+    <label for="input">
+        Enter User Name :
+        <input type="number" id="input2" onkeydown="user1(event)">
+    </label>
+    <input type="button" onclick="user()" value="check"> 
+    <h1>Value</h1>
+    <select  id="value"></select>
+ <script>
+    function user(){
+        let input1=document.querySelector("#input2")
+        let ab= input1.value
+        let select1=document.querySelector("#value")
+        const option = document.createElement("option");
+        option.textContent = ab;
+        select1.appendChild(option);
+        input1.value=""
+    }
+    function user1(event) {
+    let key = event.key;
+    if (key == "Enter") { 
+        let input1=document.querySelector("#input2")
+        let ab= input1.value
+        let select1=document.querySelector("#value")
+        const option = document.createElement("option");
+        option.textContent = ab;
+        select1.appendChild(option);
+        input1.value=""
+}
+}
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 03</title>
+</head>
+<body>
+    <script>
+        let divEl = document.createElement("div")
+        divEl.style.maxWidth="25%"
+        divEl.style.marginLeft="auto"
+        divEl.style.marginRight="auto"
+        document.body.appendChild(divEl)
+        let headEl = document.createElement("p")
+        headEl.textContent="Name : "
+        divEl.appendChild(headEl)
+        let inputEl = document.createElement("input")
+        inputEl.setAttribute("id","Look")
+        headEl.appendChild(inputEl)
+        let buttonEl = document.createElement("button")
+        buttonEl.textContent = "Look!"
+        buttonEl.setAttribute("onclick","changeEvent()")
+        headEl.appendChild(buttonEl)
+
+        
+        function changeEvent() { 
+            let inputEl= document.querySelector('#Look')
+            let ab = inputEl.value
+            alert(ab)
+        }
+    </script>
+</body>
+</html>
