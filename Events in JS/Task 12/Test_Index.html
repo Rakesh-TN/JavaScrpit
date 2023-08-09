@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Manipulation</title>
+</head>
+<body>
+  <label for="userDate">Enter a date:</label>
+  <input type="date" id="userDate">
+  <button onclick="displayDates()">Display Dates</button>
+
+  <h3>Dates:</h3>
+  <p>+5 days: <input type="text" id="plusFiveDays" readonly></p>
+  <p>-5 days: <input type="text" id="minusFiveDays" readonly></p>
+
+  <script>
+    function displayDates() {
+      const userDateInput = document.getElementById("userDate");
+      const plusFiveDaysInput = document.getElementById("plusFiveDays");
+      const minusFiveDaysInput = document.getElementById("minusFiveDays");
+
+      const userDate = new Date(userDateInput.value);
+      if (isNaN(userDate)) {
+        alert("Please enter a valid date.");
+        return;
+      }
+
+      const plusFiveDays = new Date(userDate);
+      plusFiveDays.setDate(userDate.getDate() + 5);
+
+      const minusFiveDays = new Date(userDate);
+      minusFiveDays.setDate(userDate.getDate() - 5);
+
+      plusFiveDaysInput.value = plusFiveDays.toISOString().substr(0, 10);
+      minusFiveDaysInput.value = minusFiveDays.toISOString().substr(0, 10);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task 11</title>
+</head>
+<body>
+    <label for="date">Enter date:
+        <input type="date"  id="date">
+    </label>
+    <input type="button" value="calculate" onclick="calculate()">
+    <br>
+    <br>
+    <label for="date">Date with +5 to -5 days:
+        <input type="text"  id="dateplus">
+        <input type="text"  id="dateminus">
+    </label> 
+    <script>
+            function calculate() {
+            let Date1 = document.getElementById("date").value;
+            if (Date1) {
+                let selected= new Date(Date1);
+                
+                let plus= new Date(selected);
+                plus.setDate(selected.getDate() + 5);
+                
+                let minus = new Date(selected);
+                minus.setDate(selected.getDate() - 5);
+                
+                document.getElementById("dateplus").value = plus.toISOString().split('T')[0];
+                document.getElementById("dateminus").value = minus.toISOString().split('T')[0];
+            }
+            else if(Date1==""){
+                alert("Enter date")
+            }
+        }
+    </script>
+</body>
+</html>
