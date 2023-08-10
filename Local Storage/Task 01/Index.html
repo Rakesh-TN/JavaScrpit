@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 id="displaytheObject"></h1>
+    <script src="./index.js">
+        let pd = {
+            Name : "Rakesh TN ",
+            Age : 22,
+            Domain : " Web Developer ",
+            Batch : 17, 
+        }
+        console.log(pd)
+        let a = JSON.stringify(pd)
+        console.log(a)
+        localStorage.setItem("Details",a)
+        let deta = localStorage.getItem("Details",a)
+        let beta = JSON.parse(deta)
+        let display1 = document.querySelector("#displaytheObject")
+        display1.textContent = beta.Name + beta.Domain
+    </script>
+</body>
+</html>
