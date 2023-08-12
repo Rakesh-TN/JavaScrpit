@@ -6,6 +6,30 @@
     <title>LS Task 03</title>
 </head>
 <body>
-    
+    <form>
+        <label for="firstName">Name : </label>
+        <input type="text" id="firstName"/><br><br>
+        <label for="D-O-B">Date of Birth : </label>
+        <input type="text" id="D-O-B"/><br><br>
+        <label for="nameDomain">Name of Domain : </label>
+        <input type="text" id="nameDomain"/><br><br>
+        <button onclick="checkEvents()"> Submit </button>
+        <p id="para"></p>
+    </form>
+    <script>
+            let alpha = document.querySelector('#firstName')
+            let beta = document.querySelector('#D-O-B')
+            let comma = document.querySelector('#nameDomain')
+        function checkEvents(){
+            let a = {
+                Name : alpha.value,
+                DOB : beta.value,
+                Domain : comma.value 
+            }
+            console.log(a)
+            let plip = JSON.stringify(a)
+            localStorage.setItem("Detail",plip)
+        }
+    </script>
 </body>
 </html>
