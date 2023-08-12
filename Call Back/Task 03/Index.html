@@ -6,11 +6,17 @@
     <title>Callback Task 03</title>
 </head>
 <body>
-    <h1 id="name"></h1>
+    <h1 id="name1"></h1>
+    <h1 id="name2"></h1>
     <script>
-         let a= prompt("Enter Your Name:")
+        let a = prompt("Enter Your Name:")
         for(i=0;i<a.length;i++){
-        document.querySelector("#name").textContent+=a[i]+a[i]
+        document.querySelector("#name1").textContent+=a[i]+a[i]
+        }
+
+        let b = prompt("Enter Your Friend Name:")
+        for(i=0;i<b.length;i++){
+        document.querySelector("#name2").textContent+=b[i]+b[i]+b[i]
         }
     </script>
 </body>
