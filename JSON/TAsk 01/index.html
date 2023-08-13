@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON TASK</title>
+</head>
+
+<body>
+    <script>
+        let list = [
+
+        ]
+        let details = {
+            "Name": "Rakesh",
+            "Age": "22"
+        }
+        let DOB = "21/12/2000"
+        details.DOB = DOB
+
+        console.log(details)
+
+        let data = list.push(details)
+        console.log(list)
+        let nam = DOB.split("/").join("")
+
+
+        let name1 = Math.floor(Math.random() * details.Name.length)
+        let name2 = Math.floor(Math.random() * details.Age.length)
+        let name3 = Math.floor(Math.random() * DOB.length)
+        let name4 = Math.floor(Math.random() * details.Name.length)
+        let name5 = Math.floor(Math.random() * details.Age.length)
+        let name6 = Math.floor(Math.random() * DOB.length)
+
+
+        let pass1 = details.Name.charAt(name1) + details.Age.charAt(name2) + name3
+        let pass2 = details.Name.charAt(name4) + details.Age.charAt(name5) + name6  
+
+        console.log(pass1 + pass2)
+    </script>
+</body>
+
+</html>

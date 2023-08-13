@@ -6,30 +6,45 @@
     <title>LS Task 03</title>
 </head>
 <body>
-    <form>
-        <label for="firstName">Name : </label>
-        <input type="text" id="firstName"/><br><br>
-        <label for="D-O-B">Date of Birth : </label>
-        <input type="text" id="D-O-B"/><br><br>
-        <label for="nameDomain">Name of Domain : </label>
-        <input type="text" id="nameDomain"/><br><br>
-        <button onclick="checkEvents()"> Submit </button>
-        <p id="para"></p>
-    </form>
+    <table>
+        <tr>
+            <td> <label for="">Name:</label></td>
+            <td> <input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td> <label for="">Email:</label></td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td><label for="">Password:</label></td>
+            <td><input type="text" id="password"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" onclick="submit()"></td>
+        </tr>
+    </table>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
     <script>
-            let alpha = document.querySelector('#firstName')
-            let beta = document.querySelector('#D-O-B')
-            let comma = document.querySelector('#nameDomain')
-        function checkEvents(){
-            let a = {
-                Name : alpha.value,
-                DOB : beta.value,
-                Domain : comma.value 
-            }
-            console.log(a)
-            let plip = JSON.stringify(a)
-            localStorage.setItem("Detail",plip)
+        function submit() {
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let a = []
+            let all = { name, email, password }
+            a.push(all)
+            let stringify = localStorage.setItem("personal", JSON.stringify(a))
+            console.log(stringify)
+            let get = localStorage.getItem("personal")
+            console.log(get)
+            let b = JSON.parse(get)
+            console.log(b)
+            document.getElementById("p1").textContent = `Name: ` + b[0].name
+            document.getElementById("p2").textContent = `Email: `+ b[0].email
+            document.getElementById("p3").textContent = `Password: 1` + b[0].password
         }
     </script>
+
 </body>
 </html>
