@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body class="bg-body-secondary">
+    <main>
+        <section>
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light fs-4 fw-bold">Resume Builder <span class="fs-6 fw-light">for us</span></a>
+                </div>
+            </nav>
+        </section>
+        <section>
+            <div class="text-center mt-5 mb-5">
+                <h1 class="display-4 ">Welcome to Resume Builder</h1>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p class="text-center fs-5">Personal Details</p>
+                <div>
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter the Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="numberInput" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="numberInput" placeholder="Enter the Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mailInput" class="form-label">Gmail</label>
+                        <input type="text" class="form-control" id="mailInput" placeholder="Enter the Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="linkedinInput" class="form-label">Linkedin Profile URL</label>
+                        <input type="text" class="form-control" id="linkedinInput" placeholder="Enter the Linkedin Profile URL" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="githubInput" class="form-label">Github URL</label>
+                        <input type="text" class="form-control" id="githubInput" placeholder="Enter the Github URL" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Passport Size Photo</label>
+                        <input class="form-control" type="file" id="formFileMultiple">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div><p class="text-center fs-5">Academic Details</p></div>
+                <div class="mb-3" id="collegeEdu">
+                    <div class="collegeDetail" id="collegeDetail">
+                        <label for="collInput" class="form-label">College</label>
+                        <input type="text" class="form-control" id="collInput" placeholder="Degree" required><br>
+                        <input type="text" class="form-control" id="collnameInput" placeholder="Name of the College" required><br>
+                        <input type="number" class="form-control" id="coll%Input" placeholder="Enter the Percentage" required><br>
+                        <input type="text" class="form-control" id="coll*namInput" placeholder="Name of the University" required> <br>
+                        <input type="number" class="form-control" id="collpassInput" placeholder="Enter the Passout Year" required>
+                    </div>
+                    
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-dark" onclick="addEducationField()">Add</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div><p class="text-center fs-5">Work Experiance</p></div>
+                <div class="mb-3" id="workSpace" >
+                    <div class="workspaceDetail" id="workspaceDetail">
+                        <input type="text" class="form-control" id="worknameInput" placeholder="Name of the Company" required><br>
+                        <input type="text" class="form-control" id="workPositionInput" placeholder="Name of the Position" required><br>
+                        <input type="number" class="form-control" id="work%Input" placeholder="Duration" required>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-dark" onclick="addWorkExperiences()">Add</button>
+                </div>    
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div><p class="text-center fs-5">Certificate</p></div>
+                <div id="certiHistory">
+                    <div id="certiDetail">
+                        <input type="text" class="form-control" id="CertiInput" placeholder="Name of the Course" required><br>
+                        <input type="text" class="form-control" id="CertinameInput" placeholder="Name of the Authority" required><br>
+                        <input type="text" class="form-control" id="Certi%Input" placeholder="Credential ID" required><br>
+                        <input type="text" class="form-control" id="CertiURLInput" placeholder="Credential URL" required><br>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-dark" onclick="addCertificationField()">Add</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div><p class="text-center fs-5">Skills</p></div>
+                <div id="yourSkils">
+                    <div id="skillField">
+                        <input type="text" class="form-control" id="skillsInput" placeholder="Enter the Skills" required> <br>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-dark" onclick="addSkills()">Add</button>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5">
+                <div class="text-center mb-3">
+                    <button type="button" class="btn btn-success" onclick="saveResume()">Save</button>  <button type="button" class="btn btn-primary" onclick="printResume()">Generate</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="./Script.js"></script>
+    
+</body>
+</html>
